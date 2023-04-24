@@ -1,0 +1,6 @@
+[submodule "lib/PulseOut"]
+	path = lib/PulseOut
+	url = https://github.com/TheKikGen/PulseOut.git
+[submodule "lib/midiXparser"]
+	path = lib/midiXparser
+	url = https://github.com/TheKikGen/midiXparser.git
