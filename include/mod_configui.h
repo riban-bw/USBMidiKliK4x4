@@ -308,10 +308,10 @@ char AskDigit()
 ///////////////////////////////////////////////////////////////////////////////
 char AskChar()
 {
-  while (!Serial.available() >0);
+  while (!Serial.available());
   char c = Serial.read();
   // Flush
-  while (Serial.available()>0) Serial.read();
+  while (Serial.available()) Serial.read();
   return c;
 }
 

@@ -316,7 +316,7 @@ void EE_PrmInit(bool factorySettings)
   // Read the EEPROM parameters structure
   EE_PrmLoad();
 
-  // If the signature is not found, of not the same version of parameters structure,
+  // If the signature is not found, or not the same version of parameters structure,
   // or new version, or new size then initialize (factory settings)
 
 	// New firmware  uploaded

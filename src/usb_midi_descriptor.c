@@ -171,35 +171,52 @@ __ __| |           |  /_) |     ___|             |           |
      MS_CS_INTERFACE_DESCRIPTOR         MS_CS_Interface;
 
      // MIDI IN DESCRIPTORS - 16 PAIRS MAX
-     // 2 PORTS IS THE MINIMUM.
+     // 1 PORT IS THE MINIMUM.
 
      // Embedded
 
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_1;
+     #if USB_MIDI_IO_PORT_NUM > 1
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_2;
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
+     #if USB_MIDI_IO_PORT_NUM > 2
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_3;
+     #if USB_MIDI_IO_PORT_NUM > 3
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_4;
-
-     #if USB_MIDI_IO_PORT_NUM >= 8
+     #if USB_MIDI_IO_PORT_NUM > 4
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_5;
+     #if USB_MIDI_IO_PORT_NUM > 5
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_6;
+     #if USB_MIDI_IO_PORT_NUM > 6
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_7;
+     #if USB_MIDI_IO_PORT_NUM > 7
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_8;
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
+     #if USB_MIDI_IO_PORT_NUM > 8
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_9;
+     #if USB_MIDI_IO_PORT_NUM > 9
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_A;
+     #if USB_MIDI_IO_PORT_NUM > 10
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_B;
+     #if USB_MIDI_IO_PORT_NUM > 11
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_C;
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_D;
+     #if USB_MIDI_IO_PORT_NUM > 13
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_E;
+     #if USB_MIDI_IO_PORT_NUM > 14
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_F;
+     #if USB_MIDI_IO_PORT_NUM > 15
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_10;
-
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
      #endif
      #endif
      #endif
@@ -207,30 +224,47 @@ __ __| |           |  /_) |     ___|             |           |
 
      // External
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_11;
+     #if USB_MIDI_IO_PORT_NUM > 1
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_12;
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
+     #if USB_MIDI_IO_PORT_NUM > 2
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_13;
+     #if USB_MIDI_IO_PORT_NUM > 3
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_14;
-
-     #if USB_MIDI_IO_PORT_NUM >= 8
+     #if USB_MIDI_IO_PORT_NUM > 4
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_15;
+     #if USB_MIDI_IO_PORT_NUM > 5
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_16;
+     #if USB_MIDI_IO_PORT_NUM > 6
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_17;
+     #if USB_MIDI_IO_PORT_NUM > 7
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_18;
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
+     #if USB_MIDI_IO_PORT_NUM > 8
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_19;
+     #if USB_MIDI_IO_PORT_NUM > 9
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_1A;
+     #if USB_MIDI_IO_PORT_NUM > 10
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_1B;
+     #if USB_MIDI_IO_PORT_NUM > 11
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_1C;
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_1D;
+     #if USB_MIDI_IO_PORT_NUM > 13
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_1E;
+     #if USB_MIDI_IO_PORT_NUM > 14
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_1F;
+     #if USB_MIDI_IO_PORT_NUM > 15
      MIDI_IN_JACK_DESCRIPTOR            MIDI_IN_JACK_20;
-
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
      #endif
      #endif
      #endif
@@ -240,62 +274,95 @@ __ __| |           |  /_) |     ___|             |           |
      // Embedded
 
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_21;
+     #if USB_MIDI_IO_PORT_NUM > 1
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_22;
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
+     #if USB_MIDI_IO_PORT_NUM > 2
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_23;
+     #if USB_MIDI_IO_PORT_NUM > 3
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_24;
-
-     #if USB_MIDI_IO_PORT_NUM >= 8
+     #if USB_MIDI_IO_PORT_NUM > 4
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_25;
+     #if USB_MIDI_IO_PORT_NUM > 5
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_26;
+     #if USB_MIDI_IO_PORT_NUM > 6
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_27;
+     #if USB_MIDI_IO_PORT_NUM > 7
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_28;
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
+     #if USB_MIDI_IO_PORT_NUM > 8
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_29;
+     #if USB_MIDI_IO_PORT_NUM > 9
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_2A;
+     #if USB_MIDI_IO_PORT_NUM > 10
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_2B;
+     #if USB_MIDI_IO_PORT_NUM > 11
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_2C;
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_2D;
+     #if USB_MIDI_IO_PORT_NUM > 13
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_2E;
+     #if USB_MIDI_IO_PORT_NUM > 14
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_2F;
+     #if USB_MIDI_IO_PORT_NUM > 15
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_30;
-
      #endif
      #endif
      #endif
      #endif
-
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
 
      // External
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_31;
+     #if USB_MIDI_IO_PORT_NUM > 1
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_32;
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
+     #if USB_MIDI_IO_PORT_NUM > 2
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_33;
+     #if USB_MIDI_IO_PORT_NUM > 3
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_34;
-
-     #if USB_MIDI_IO_PORT_NUM >= 8
+     #if USB_MIDI_IO_PORT_NUM > 4
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_35;
+     #if USB_MIDI_IO_PORT_NUM > 5
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_36;
+     #if USB_MIDI_IO_PORT_NUM > 6
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_37;
+     #if USB_MIDI_IO_PORT_NUM > 7
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_38;
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
+     #if USB_MIDI_IO_PORT_NUM > 8
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_39;
+     #if USB_MIDI_IO_PORT_NUM > 9
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_3A;
+     #if USB_MIDI_IO_PORT_NUM > 10
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_3B;
+     #if USB_MIDI_IO_PORT_NUM > 11
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_3C;
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_3D;
+     #if USB_MIDI_IO_PORT_NUM > 13
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_3E;
+     #if USB_MIDI_IO_PORT_NUM > 14
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_3F;
+     #if USB_MIDI_IO_PORT_NUM > 15
      MIDI_OUT_JACK_DESCRIPTOR(1)        MIDI_OUT_JACK_40;
-
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
      #endif
      #endif
      #endif
@@ -380,6 +447,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x01,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 1
      .MIDI_IN_JACK_2 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -388,9 +456,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x02,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
-
+     #if USB_MIDI_IO_PORT_NUM > 2
      .MIDI_IN_JACK_3 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -399,6 +465,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x03,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 3
      .MIDI_IN_JACK_4 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -407,9 +474,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x04,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
-
-    #if USB_MIDI_IO_PORT_NUM >= 8
-
+     #if USB_MIDI_IO_PORT_NUM > 4
      .MIDI_IN_JACK_5 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -418,6 +483,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x05,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 5
      .MIDI_IN_JACK_6 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -426,6 +492,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x06,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 6
      .MIDI_IN_JACK_7 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -434,6 +501,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x07,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 7
      .MIDI_IN_JACK_8 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -442,9 +510,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x08,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
-
+     #if USB_MIDI_IO_PORT_NUM > 8
      .MIDI_IN_JACK_9 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -453,6 +519,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x09,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 9
      .MIDI_IN_JACK_A = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -461,6 +528,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x0A,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 10
      .MIDI_IN_JACK_B = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -469,6 +537,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x0B,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 11
      .MIDI_IN_JACK_C = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -477,8 +546,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x0C,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      .MIDI_IN_JACK_D = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -487,6 +555,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x0D,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 13
      .MIDI_IN_JACK_E = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -495,6 +564,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x0E,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 14
      .MIDI_IN_JACK_F = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -503,6 +573,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x0F,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+     #if USB_MIDI_IO_PORT_NUM > 15
      .MIDI_IN_JACK_10 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -511,6 +582,17 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x10,
          .iJack              = STRING_IJACK_IN_ID,  // UMK 4X IN
      },
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
     #endif
     #endif
     #endif
@@ -526,6 +608,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x11,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 1
      .MIDI_IN_JACK_12 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -534,9 +617,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x12,
          .iJack              = 0x00,
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
-
+     #if USB_MIDI_IO_PORT_NUM > 2
      .MIDI_IN_JACK_13 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -545,6 +626,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x13,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 3
      .MIDI_IN_JACK_14 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -553,8 +635,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x14,
          .iJack              = 0x00,
      },
-   #if USB_MIDI_IO_PORT_NUM >= 8
-
+     #if USB_MIDI_IO_PORT_NUM > 4
      .MIDI_IN_JACK_15 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -563,6 +644,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x15,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 5
      .MIDI_IN_JACK_16 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -571,6 +653,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x16,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 6
      .MIDI_IN_JACK_17 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -579,6 +662,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x17,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 7
      .MIDI_IN_JACK_18 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -587,9 +671,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x18,
          .iJack              = 0x00,
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
-
+     #if USB_MIDI_IO_PORT_NUM > 8
      .MIDI_IN_JACK_19 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -598,6 +680,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x19,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 9
      .MIDI_IN_JACK_1A = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -606,6 +689,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x1A,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 10
      .MIDI_IN_JACK_1B = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -614,6 +698,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x1B,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 11
      .MIDI_IN_JACK_1C = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -622,8 +707,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x1C,
          .iJack              = 0x00,
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      .MIDI_IN_JACK_1D = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -632,6 +716,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x1D,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 13
      .MIDI_IN_JACK_1E = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -640,6 +725,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x1E,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 14
      .MIDI_IN_JACK_1F = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -648,6 +734,7 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x1F,
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 15
      .MIDI_IN_JACK_20 = {
          .bLength            = sizeof(MIDI_IN_JACK_DESCRIPTOR),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -656,6 +743,17 @@ __ __| |           |  /_) |     ___|             |           |
          .bJackId            = 0x20,
          .iJack              = 0x00,
      },
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
      #endif
      #endif
      #endif
@@ -674,6 +772,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 1
      .MIDI_OUT_JACK_22 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -685,9 +784,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
-
+     #if USB_MIDI_IO_PORT_NUM > 2
      .MIDI_OUT_JACK_23 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -699,6 +796,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 3
      .MIDI_OUT_JACK_24 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -710,9 +808,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 8
-
+     #if USB_MIDI_IO_PORT_NUM > 4
      .MIDI_OUT_JACK_25 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -724,6 +820,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 5
      .MIDI_OUT_JACK_26 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -735,6 +832,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 6
      .MIDI_OUT_JACK_27 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -746,6 +844,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 7
      .MIDI_OUT_JACK_28 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -757,9 +856,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
-
+     #if USB_MIDI_IO_PORT_NUM > 8
      .MIDI_OUT_JACK_29 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -771,6 +868,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 9
      .MIDI_OUT_JACK_2A = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -782,6 +880,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 10
      .MIDI_OUT_JACK_2B = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -793,6 +892,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 11
      .MIDI_OUT_JACK_2C = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -804,8 +904,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      .MIDI_OUT_JACK_2D = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -817,6 +916,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 13
      .MIDI_OUT_JACK_2E = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -828,6 +928,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 14
      .MIDI_OUT_JACK_2F = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -839,6 +940,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #if USB_MIDI_IO_PORT_NUM > 15
      .MIDI_OUT_JACK_30 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -850,6 +952,17 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = STRING_IJACK_OUT_ID,  // UMK 4X OUT
      },
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
+     #endif
      #endif
      #endif
      #endif
@@ -869,6 +982,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 1
      .MIDI_OUT_JACK_32 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -880,9 +994,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 4
-
+     #if USB_MIDI_IO_PORT_NUM > 2
      .MIDI_OUT_JACK_33 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -894,6 +1006,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 3
      .MIDI_OUT_JACK_34 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -905,9 +1018,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 8
-
+     #if USB_MIDI_IO_PORT_NUM > 4
      .MIDI_OUT_JACK_35 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -919,6 +1030,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 5
      .MIDI_OUT_JACK_36 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -930,6 +1042,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 6
      .MIDI_OUT_JACK_37 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -941,6 +1054,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 7
      .MIDI_OUT_JACK_38 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -952,9 +1066,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 12
-
+     #if USB_MIDI_IO_PORT_NUM > 8
      .MIDI_OUT_JACK_39 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -966,6 +1078,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 9
      .MIDI_OUT_JACK_3A = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -977,6 +1090,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 10
      .MIDI_OUT_JACK_3B = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -988,6 +1102,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 11
      .MIDI_OUT_JACK_3C = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -999,8 +1114,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
-
-     #if USB_MIDI_IO_PORT_NUM >= 16
+     #if USB_MIDI_IO_PORT_NUM > 12
      .MIDI_OUT_JACK_3D = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -1012,6 +1126,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 13
      .MIDI_OUT_JACK_3E = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -1023,6 +1138,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 14
      .MIDI_OUT_JACK_3F = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -1034,6 +1150,7 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
+     #if USB_MIDI_IO_PORT_NUM > 15
      .MIDI_OUT_JACK_40 = {
          .bLength            = MIDI_OUT_JACK_DESCRIPTOR_SIZE(1),
          .bDescriptorType    = USB_DESCRIPTOR_TYPE_CS_INTERFACE,
@@ -1045,11 +1162,21 @@ __ __| |           |  /_) |     ___|             |           |
          .baSourcePin        = {0x01},
          .iJack              = 0x00,
      },
-
-       #endif
-       #endif
-       #endif
-       #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
+    #endif
 
      // End of MIDI JACK Descriptor =======================================
 
@@ -1072,22 +1199,53 @@ __ __| |           |  /_) |     ___|             |           |
        // MIDI IN EMBEDDED
        .bNumEmbMIDIJack      = USB_MIDI_IO_PORT_NUM,
        .baAssocJackID        = {
-         0x01,0X02,
-         #if USB_MIDI_IO_PORT_NUM >= 4
-         0X03,0X04,
-         #if USB_MIDI_IO_PORT_NUM >= 8
-         0X05,0X06,0X07,0X08,
-         #if USB_MIDI_IO_PORT_NUM >= 12
-         0X09,0X0A,0X0B,0X0C,
-         #if USB_MIDI_IO_PORT_NUM >= 16
-         0X0D,0X0E,0X0F,0X10
-
+         0x01
+         #if USB_MIDI_IO_PORT_NUM > 1
+         ,0x02
+         #if USB_MIDI_IO_PORT_NUM > 2
+         ,0X03
+         #if USB_MIDI_IO_PORT_NUM > 3
+         ,0X04
+         #if USB_MIDI_IO_PORT_NUM > 4
+         ,0X05
+         #if USB_MIDI_IO_PORT_NUM > 5
+         ,0X06
+         #if USB_MIDI_IO_PORT_NUM > 6
+         ,0X07
+         #if USB_MIDI_IO_PORT_NUM > 7
+         ,0X08
+         #if USB_MIDI_IO_PORT_NUM > 8
+         ,0X09
+         #if USB_MIDI_IO_PORT_NUM > 9
+         ,0X0A
+         #if USB_MIDI_IO_PORT_NUM > 10
+         ,0X0B
+         #if USB_MIDI_IO_PORT_NUM > 11
+         ,0X0C
+         #if USB_MIDI_IO_PORT_NUM > 12
+         ,0X0D
+         #if USB_MIDI_IO_PORT_NUM > 13
+         ,0X0E
+         #if USB_MIDI_IO_PORT_NUM > 14
+         ,0X0F
+         #if USB_MIDI_IO_PORT_NUM > 15
+         ,0X10
          #endif
          #endif
          #endif
          #endif
-
-       },
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+       }
    },
 
      .DataInEndpoint = {
@@ -1108,25 +1266,54 @@ __ __| |           |  /_) |     ___|             |           |
        // MIDI OUT EMBEDDED
        .bNumEmbMIDIJack      = USB_MIDI_IO_PORT_NUM,
        .baAssocJackID        = {
-         0x21,0X22,
-
-         #if USB_MIDI_IO_PORT_NUM >= 4
-         0X23,0X24,
-         #if USB_MIDI_IO_PORT_NUM >= 8
-         0X25,0X26,0X27,0X28,
-         #if USB_MIDI_IO_PORT_NUM >= 12
-         0X29,0X2A,0X2B,0X2C,
-         #if USB_MIDI_IO_PORT_NUM >= 16
-         0X2D,0X2E,0X2F,0X30
-
+         0x21
+         #if USB_MIDI_IO_PORT_NUM > 1
+         ,0X22
+         #if USB_MIDI_IO_PORT_NUM > 2
+         ,0X23
+         #if USB_MIDI_IO_PORT_NUM > 3
+         ,0X24
+         #if USB_MIDI_IO_PORT_NUM > 4
+         ,0X25
+         #if USB_MIDI_IO_PORT_NUM > 5
+         ,0X26
+         #if USB_MIDI_IO_PORT_NUM > 6
+         ,0X27
+         #if USB_MIDI_IO_PORT_NUM > 7
+         ,0X28
+         #if USB_MIDI_IO_PORT_NUM > 8
+         ,0X29
+         #if USB_MIDI_IO_PORT_NUM > 9
+         ,0X2A
+         #if USB_MIDI_IO_PORT_NUM > 10
+         ,0X2B
+         #if USB_MIDI_IO_PORT_NUM > 11
+         ,0X2C
+         #if USB_MIDI_IO_PORT_NUM > 12
+         ,0X2D
+         #if USB_MIDI_IO_PORT_NUM > 13
+         ,0X2E
+         #if USB_MIDI_IO_PORT_NUM > 14
+         ,0X2F
+         #if USB_MIDI_IO_PORT_NUM > 15
+         ,0X30
          #endif
          #endif
          #endif
          #endif
-
-       },
-   },
-
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+         #endif
+       }
+   }
  };
 
  static const ONE_DESCRIPTOR usbMidiDevice_Descriptor = {
